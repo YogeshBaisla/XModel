@@ -1,10 +1,10 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
 .modal{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-}
-.modal-content{
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -13,12 +13,13 @@ align-items: center;
   border: 1px solid #f0f0f0;
   border-radius: 10px;
 }
-.formContainer{
+.modal-content{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .inputFields{
   width: 300px;
   height: 30px;

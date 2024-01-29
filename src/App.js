@@ -8,7 +8,7 @@ function App() {
     dob:""
   })
   const makeFormVisible = ()=>{
-    let formDiv = document.getElementsByClassName("modal-content")[0]
+    let formDiv = document.getElementsByClassName("modal")[0]
     formDiv.style.display = "flex"
   }
   const formHandle = (e)=>{
@@ -27,12 +27,12 @@ function App() {
     })}
   }
   return (
-    <div className="modal">
+    <div className="container">
       <h1>User Details Modal</h1>
       <button className="buttonStyle" onClick={makeFormVisible}>Open Form</button>
-      <div className="modal-content">
+      <div className="modal">
       <h1>Fill Details</h1>
-      <form className="formContainer" onSubmit={formHandle}>
+      <form className="modal-content" onSubmit={formHandle}>
         <label htmlFor="username">Username:</label>
         <input id="username" type="text" className="inputFields" value={formData.username} onChange={(e)=>{setFormData(prevState => ({
       ...prevState,
