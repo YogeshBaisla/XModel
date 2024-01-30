@@ -7,13 +7,12 @@ function App() {
     phone:"",
     dob:""
   })
+  const [formVisible,setFormVisible] = useState(false)
   const makeFormVisible = ()=>{
-    let formDiv = document.getElementsByClassName("modal")[0]
-    formDiv.style.display = "flex"
+    setFormVisible(true)
   }
   const makeFormInVisible = ()=>{
-    let formDiv = document.getElementsByClassName("modal")[0]
-    formDiv.style.display = "none"
+    setFormVisible(false)
   }
   const formHandle = (e)=>{
     e.preventDefault()
@@ -36,7 +35,7 @@ function App() {
     <div className="container">
       <h1>User Details Modal</h1>
       <button className="buttonStyle" onClick={makeFormVisible}>Open Form</button>
-      <div className="modal">
+      {formVisible && <div className="modal">
       <h1>Fill Details</h1>
       <form className="modal-content" onSubmit={formHandle}>
         <label htmlFor="username">Username:</label>
@@ -61,7 +60,7 @@ function App() {
     }))}} required/>
         <button className="submit-button" type="submit">Submit</button>
       </form>
-      </div>
+      </div>}
     </div>
     </div>
   );
