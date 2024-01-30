@@ -66,8 +66,10 @@ function App() {
   }, []);
 
   return (
-    <div className="container" onClick={(e)=>closeForm(e)}>
+    <div className="container" >
+      <div onClick={(e)=>closeForm(e)}>
       <h1>User Details Modal</h1>
+      </div>
       <button className="buttonStyle" onClick={makeFormVisible}>
         Open Form
       </button>
