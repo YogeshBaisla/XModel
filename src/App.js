@@ -11,6 +11,10 @@ function App() {
     let formDiv = document.getElementsByClassName("modal")[0]
     formDiv.style.display = "flex"
   }
+  const makeFormInVisible = ()=>{
+    let formDiv = document.getElementsByClassName("modal")[0]
+    formDiv.style.display = "none"
+  }
   const formHandle = (e)=>{
     e.preventDefault()
     if(e.target[2].value.length < 10){
@@ -27,6 +31,8 @@ function App() {
     })}
   }
   return (
+    <div>
+      <div className="formCloser" onClick={makeFormInVisible}></div>
     <div className="container">
       <h1>User Details Modal</h1>
       <button className="buttonStyle" onClick={makeFormVisible}>Open Form</button>
@@ -56,6 +62,7 @@ function App() {
         <button className="submit-button" type="submit">Submit</button>
       </form>
       </div>
+    </div>
     </div>
   );
 }
