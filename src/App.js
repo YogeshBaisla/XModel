@@ -117,9 +117,9 @@ function App() {
                 }}
                 required
               />
-              <label htmlFor="dateofbirth">Date of Birth:</label>
+              <label htmlFor="dob">Date of Birth:</label>
               <input
-                id="dateofbirth"
+                id="dob"
                 type="date"
                 className="inputFields"
                 value={formData.dob}
